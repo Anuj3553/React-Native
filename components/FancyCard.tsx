@@ -15,46 +15,66 @@ export default function FancyCard() {
                 <View style={styles.cardBody}>
                     <Text style={styles.cardTitle}>Taj Mahal</Text>
                     <Text style={styles.cardLabel}>Agra, India</Text>
-                    <Text style={styles.cardDesription}>Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself.
+                    <Text style={styles.cardDesription}>Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra.
                     </Text>
                     <Text style={styles.cardFooter}>12 mins away</Text>
+                </View>
             </View>
-        </View>
         </View >
     );
 }
 
 const styles = StyleSheet.create({
     headingText: {
-        fontSize: 23,
+        fontSize: 24,
         fontWeight: 'bold',
         paddingHorizontal: 8,
     },
-    card: {},
+    card: {
+        height: 350,
+        borderRadius: 6,
+        marginVertical: 12,
+        marginHorizontal: 16,
+    },
     cardElevated: {
-        padding: 8,
-        elevation: 4,
+        backgroundColor: '#fff',
+        elevation: 3,
+        shadowOffset: {
+            width: 1,
+            height: 1,
+        },
     },
     cardImage: {
-        height: 250,
+        height: 180,
+        marginBottom: 8,
+        borderTopLeftRadius: 6,
+        borderTopRightRadius: 6,
     },
     cardBody: {
-        padding: 8,
+        flex: 1,
+        flexGrow: 1,
+        paddingHorizontal: 12,
     },
     cardTitle: {
-        fontSize: 20,
+        color: '#000',
+        fontSize: 22,
         fontWeight: 'bold',
+        marginBottom: 4,
     },
     cardLabel: {
+        color: '#000',
         fontSize: 16,
-        color: '#666',
+        marginBottom: 6,
     },
     cardDesription: {
-        fontSize: 16,
-        color: '#666',
+        color: '#242B2E',
+        fontSize: 15,
+        marginTop: 6,
+        marginBottom: 12,
+        flexShrink: 1,
     },
     cardFooter: {
-        fontSize: 16,
-        color: '#666',
+        fontSize: 12,
+        color: '#000',
     },
 });
