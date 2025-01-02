@@ -24,7 +24,7 @@ export default function ContactList() {
         {
             uid: 4,
             name: 'Bill Gates',
-            status: 'If you born poor, it is not your mistake. But if you die poor, it is your mistake',
+            status: "Don't compare yourself",
             imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Bill_Gates%2C_September_2024.jpg/330px-Bill_Gates%2C_September_2024.jpg',
         },
         {
@@ -48,7 +48,7 @@ export default function ContactList() {
                 style={styles.container}
             >
                 {contacts.map(({ uid, name, status, imageUrl }) => (
-                   <View key={uid} style={styles.userCard}>
+                    <View key={uid} style={styles.userCard}>
                         <Image
                             source={{
                                 uri: imageUrl,
@@ -59,7 +59,7 @@ export default function ContactList() {
                             <Text style={styles.userName}>{name}</Text>
                             <Text style={styles.userStatus}>{status}</Text>
                         </View>
-                   </View>
+                    </View>
                 ))}
             </ScrollView>
         </View>
@@ -73,30 +73,34 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
     },
     container: {
-        padding: 8,
+        paddingHorizontal: 16,
+        marginBottom: 4,
     },
     userCard: {
+        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
+        marginBottom: 3,
+        backgroundColor: '#C4DEF6',
         padding: 8,
-        backgroundColor: '#fff',
-        borderRadius: 8,
-        marginBottom: 8,
+        borderRadius: 10,
     },
     userImage: {
         width: 60,
         height: 60,
         borderRadius: 30,
+        marginRight: 14,
     },
     userDetails: {
         marginLeft: 12,
     },
     userName: {
-        fontSize: 18,
-        fontWeight: 'bold',
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#000',
     },
     userStatus: {
-        fontSize: 14,
+        fontSize: 12,
         color: '#666',
     },
 });
