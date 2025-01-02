@@ -29,7 +29,7 @@ export default function ActionCard() {
                     style={styles.cardImage}
                 />
                 <View style={styles.bodyContainer}>
-                    <Text numberOfLines={3}>
+                    <Text style={styles.text} numberOfLines={5}>
                         JavaScript is one of the most popular programming languages in the world. It is a versatile language that is used for web development, game development, mobile app development, and more.
                     </Text>
                 </View>
@@ -54,48 +54,56 @@ const styles = StyleSheet.create({
     headingText: {
         fontSize: 24,
         fontWeight: 'bold',
-        textAlign: 'center',
-        margin: 10,
+        paddingHorizontal: 8,
+    },
+    text: {
+        color: 'white',
     },
     card: {
         margin: 10,
-        padding: 10,
         borderRadius: 10,
     },
     elevatedCard: {
-        shadowColor: '#000',
+        shadowColor: '#fff',
+        elevation: 3,
         shadowOffset: {
-            width: 0,
-            height: 2,
+            width: 1,
+            height: 1,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
+        shadowOpacity: 0.4,
+        backgroundColor: '#000',
     },
     headingContainer: {
+        height: 40,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     headerText: {
-        fontSize: 18,
+        color: 'white',
+        fontSize: 16,
         fontWeight: 'bold',
     },
     cardImage: {
-        width: '100%',
         height: 170,
-        borderRadius: 10,
         marginTop: 10,
     },
     bodyContainer: {
-        marginTop: 10,
+        padding: 10,
     },
     footerContainer: {
-        marginTop: 10,
+        padding: 8,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
     },
     socialLinks: {
-        color: 'blue',
-        fontSize: 16,
-        margin: 5,
+        color: '#000',
+        fontSize: 14,
+        fontWeight: 'bold',
+        backgroundColor: '#fff',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderRadius: 5,
     },
 });

@@ -63,13 +63,14 @@ const styles = StyleSheet.create({
     },
     cardLabel: {
         color: '#000',
-        fontSize: 16,
+        fontWeight: '300',
+        fontSize: 14,
         marginBottom: 6,
     },
     cardDesription: {
         color: '#242B2E',
         fontSize: 15,
-        marginTop: 6,
+        marginTop: 4,
         marginBottom: 12,
         flexShrink: 1,
     },
