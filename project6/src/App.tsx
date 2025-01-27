@@ -143,7 +143,7 @@ function App(): JSX.Element {
         onPress={reloadGame}
       >
         <Text style={styles.gameBtnText}>
-          {gameWinner ? 'Start new game' : 'reLoad the game'}
+          {gameWinner ? 'Start new game' : 'Reload the game'}
         </Text>
       </Pressable>
     </SafeAreaView>
